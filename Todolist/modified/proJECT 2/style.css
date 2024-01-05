@@ -1,0 +1,155 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://cutewallpaper.org/27/background-wallpaper-gaming/gaming-pc-wallpaper-hd-wallpapers-for-tech-computer-wallpaper.png");
+}
+
+::selection {
+  color: #634040;
+  background-color: #e3ddeb;
+}
+
+.container {
+  padding: 2rem 7rem;
+  border-radius: 14px;
+  background: #eee6e6;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-image: url("https://cutewallpaper.org/27/background-wallpaper-gaming/gaming-pc-wallpaper-hd-wallpapers-for-tech-computer-wallpaper.png");
+}
+
+.result_images {
+  display: flex;
+  column-gap: 7rem;
+}
+
+.cpu_result .user_result {
+  transform-origin: left;
+
+}
+
+/* .cpu_result,.user_result:active{
+    animation: userShake 0.7s ease infinite;
+} */
+
+#cpu_result1{
+  animation: cpuShake 0.7s ease infinite;
+  animation-play-state: paused;
+  rotate:270deg;
+
+
+  
+}
+
+#user_result1{
+  animation: userShake 0.7s ease infinite ;
+  animation-play-state: paused;
+}
+
+@keyframes userShake {
+  0%{
+    transform: rotate(95deg);
+  }
+  50% {
+    transform: rotate(100deg);
+  }
+}
+
+.container.start .cpu_result {
+  transform-origin: right;
+  animation: cpuShake 0.7s ease infinite;
+}
+
+@keyframes cpuShake {
+  0%{
+    transform: rotate(10deg);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* @keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+} w3 school's reference code part */
+
+.result_images img {
+  width: 100px;
+}
+
+.user_result img {
+  transform: rotate(90deg);
+}
+
+.cpu_result img {
+  transform: rotate(-90deg) rotateY(180deg);/*270*/
+}
+
+.result {
+  text-align: center;
+  font-size: 2rem;
+  color: #efebf5;
+  margin-top: 1.5rem;
+}
+
+.option_image img {
+  width: 50px;
+}
+
+.option_images {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  justify-content: space-between;
+}
+
+.container.start .option_images {
+  pointer-events: none;
+}
+
+.option_image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.option_image:hover {
+  opacity: 1;
+}
+
+.option_image.active {
+  opacity: 1;
+}
+
+.option_image img {
+  pointer-events: none;
+}
+
+.option_image p {
+  color: #ebe5f3;
+  font-size: 1.235rem;
+  margin-top: 1rem;
+  pointer-events: none;
+}
+
+#hiddenAudio {
+  display: none;
+}
